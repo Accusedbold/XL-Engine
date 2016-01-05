@@ -68,12 +68,16 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -81,6 +85,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -90,6 +95,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -103,6 +109,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -110,8 +117,113 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\OS\win32\main.cpp" />
+    <ClCompile Include="..\..\stdafx.cpp" />
+    <ClCompile Include="..\..\XLEngine\filestream.cpp" />
+    <ClCompile Include="..\..\XLEngine\gameLoop.cpp" />
+    <ClCompile Include="..\..\XLEngine\gameUI.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\CommonGL\graphicsDeviceGL.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\CommonGL\indexBufferGL.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\CommonGL\renderTargetGL.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\CommonGL\shaderGL.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\CommonGL\streamingVertexBuffer.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\CommonGL\textureGL.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\CommonGL\vertexBufferGL.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\Devices\graphicsDeviceGL_1_3.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\Devices\graphicsDeviceGL_2_0.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\Devices\graphicsDeviceGL_3_2.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\Devices\graphicsShadersGL_2_0.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\graphicsDevice.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\graphicsDeviceList.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\Win32\graphicsDeviceGL_Win32.cpp" />
+    <ClCompile Include="..\..\XLEngine\imageLoader.cpp" />
+    <ClCompile Include="..\..\XLEngine\iniReader.cpp" />
+    <ClCompile Include="..\..\XLEngine\iniWriter.cpp" />
+    <ClCompile Include="..\..\XLEngine\input.cpp" />
+    <ClCompile Include="..\..\XLEngine\log.cpp" />
+    <ClCompile Include="..\..\XLEngine\Math\crc32.cpp" />
+    <ClCompile Include="..\..\XLEngine\memoryPool.cpp" />
+    <ClCompile Include="..\..\XLEngine\PluginFramework\dynamicLibrary.cpp" />
+    <ClCompile Include="..\..\XLEngine\PluginFramework\pluginManager.cpp" />
+    <ClCompile Include="..\..\XLEngine\services.cpp" />
+    <ClCompile Include="..\..\XLEngine\settings.cpp" />
+    <ClCompile Include="..\..\XLEngine\Text\textSystem.cpp" />
+    <ClCompile Include="..\..\XLEngine\Threads\mutexWin32.cpp" />
+    <ClCompile Include="..\..\XLEngine\UI\draw2D.cpp" />
+    <ClCompile Include="..\..\XLEngine\UI\uiSystem.cpp" />
+    <ClCompile Include="..\..\XLEngine\Win32\clockWin32.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\OS\win32\main.h" />
+    <ClInclude Include="..\..\Resource.h" />
+    <ClInclude Include="..\..\stdafx.h" />
+    <ClInclude Include="..\..\targetver.h" />
+    <ClInclude Include="..\..\XLEngine\clock.h" />
+    <ClInclude Include="..\..\XLEngine\filestream.h" />
+    <ClInclude Include="..\..\XLEngine\gameLoop.h" />
+    <ClInclude Include="..\..\XLEngine\gameUI.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\capabilities.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\CommonGL\graphicsDeviceGL.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\CommonGL\indexBufferGL.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\CommonGL\renderTargetGL.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\CommonGL\shaderGL.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\CommonGL\streamingVertexBuffer.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\CommonGL\textureGL.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\CommonGL\vertexBufferGL.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\Devices\graphicsDeviceGL_1_3.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\Devices\graphicsDeviceGL_2_0.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\Devices\graphicsDeviceGL_3_2.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\Devices\graphicsShadersGL_2_0.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\graphicsDevice.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\graphicsDeviceList.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\graphicsDevice_Platform.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\graphicsTypes.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\samplerState.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\Win32\graphicsDeviceGL_Win32.h" />
+    <ClInclude Include="..\..\XLEngine\imageLoader.h" />
+    <ClInclude Include="..\..\XLEngine\iniReader.h" />
+    <ClInclude Include="..\..\XLEngine\iniWriter.h" />
+    <ClInclude Include="..\..\XLEngine\input.h" />
+    <ClInclude Include="..\..\XLEngine\log.h" />
+    <ClInclude Include="..\..\XLEngine\Math\crc32.h" />
+    <ClInclude Include="..\..\XLEngine\Math\math.h" />
+    <ClInclude Include="..\..\XLEngine\memoryPool.h" />
+    <ClInclude Include="..\..\XLEngine\PluginFramework\dynamicLibrary.h" />
+    <ClInclude Include="..\..\XLEngine\PluginFramework\pluginManager.h" />
+    <ClInclude Include="..\..\XLEngine\services.h" />
+    <ClInclude Include="..\..\XLEngine\settings.h" />
+    <ClInclude Include="..\..\XLEngine\stream.h" />
+    <ClInclude Include="..\..\XLEngine\Text\textSystem.h" />
+    <ClInclude Include="..\..\XLEngine\Threads\mutex.h" />
+    <ClInclude Include="..\..\XLEngine\types.h" />
+    <ClInclude Include="..\..\XLEngine\UI\draw2D.h" />
+    <ClInclude Include="..\..\XLEngine\UI\uiSystem.h" />
+    <ClInclude Include="..\..\XLEngine\xlServices.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\..\XLEngine\Text\Inconsolata.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\glew.redist.1.9.0.1\build\native\glew.redist.targets" Condition="Exists('packages\glew.redist.1.9.0.1\build\native\glew.redist.targets')" />
+    <Import Project="packages\glew.1.9.0.1\build\native\glew.targets" Condition="Exists('packages\glew.1.9.0.1\build\native\glew.targets')" />
+    <Import Project="packages\freetype.redist.2.6.2.1\build\native\freetype.redist.targets" Condition="Exists('packages\freetype.redist.2.6.2.1\build\native\freetype.redist.targets')" />
+    <Import Project="packages\freetype.2.6.2.1\build\native\freetype.targets" Condition="Exists('packages\freetype.2.6.2.1\build\native\freetype.targets')" />
+    <Import Project="packages\DevIL.redist.1.7.8\build\native\DevIL.redist.targets" Condition="Exists('packages\DevIL.redist.1.7.8\build\native\DevIL.redist.targets')" />
+    <Import Project="packages\DevIL.1.7.8\build\native\DevIL.targets" Condition="Exists('packages\DevIL.1.7.8\build\native\DevIL.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\glew.redist.1.9.0.1\build\native\glew.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\glew.redist.1.9.0.1\build\native\glew.redist.targets'))" />
+    <Error Condition="!Exists('packages\glew.1.9.0.1\build\native\glew.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\glew.1.9.0.1\build\native\glew.targets'))" />
+    <Error Condition="!Exists('packages\freetype.redist.2.6.2.1\build\native\freetype.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\freetype.redist.2.6.2.1\build\native\freetype.redist.targets'))" />
+    <Error Condition="!Exists('packages\freetype.2.6.2.1\build\native\freetype.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\freetype.2.6.2.1\build\native\freetype.targets'))" />
+    <Error Condition="!Exists('packages\DevIL.redist.1.7.8\build\native\DevIL.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\DevIL.redist.1.7.8\build\native\DevIL.redist.targets'))" />
+    <Error Condition="!Exists('packages\DevIL.1.7.8\build\native\DevIL.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\DevIL.1.7.8\build\native\DevIL.targets'))" />
+  </Target>
 </Project>

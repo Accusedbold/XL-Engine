@@ -1,2 +1,288 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" />
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="OS">
+      <UniqueIdentifier>{d577d78e-9363-4216-938b-eb09adfa4d15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OS\Win32">
+      <UniqueIdentifier>{547ddaed-425c-41a3-90aa-80ecb68c3318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XLEngine">
+      <UniqueIdentifier>{4c0a6786-645b-44dc-b5dc-3c1fbc7868df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XLEngine\Graphics">
+      <UniqueIdentifier>{83263828-0ddb-4288-8acd-03d24d8033ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XLEngine\Math">
+      <UniqueIdentifier>{6a3d3b43-a051-44ba-bb07-2049d873ebce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XLEngine\PluginFramework">
+      <UniqueIdentifier>{56ae9ce0-7a3b-4c18-a31d-3f5d8055a0c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XLEngine\Text">
+      <UniqueIdentifier>{21f828be-321e-4f7f-86b8-641504bb6782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XLEngine\Threads">
+      <UniqueIdentifier>{65753fb1-3628-4da0-9943-1e7b18176d7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XLEngine\UI">
+      <UniqueIdentifier>{a19697e2-945c-4952-aea1-2df171c3fc86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XLEngine\Win32">
+      <UniqueIdentifier>{fb73dfb2-171a-45d3-9ad1-669aee709000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XLEngine\Graphics\CommonGL">
+      <UniqueIdentifier>{340015d1-7a2e-4ec5-92f6-175f5ecd0e7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XLEngine\Graphics\Devices">
+      <UniqueIdentifier>{4fbea78f-484b-476c-9927-95431866246b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XLEngine\Graphics\Win32">
+      <UniqueIdentifier>{f16f5203-d14c-453b-a817-7cb7e5ff6c9f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\OS\win32\main.cpp">
+      <Filter>OS\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\stdafx.cpp" />
+    <ClCompile Include="..\..\XLEngine\Graphics\CommonGL\graphicsDeviceGL.cpp">
+      <Filter>XLEngine\Graphics\CommonGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Graphics\CommonGL\indexBufferGL.cpp">
+      <Filter>XLEngine\Graphics\CommonGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Graphics\CommonGL\renderTargetGL.cpp">
+      <Filter>XLEngine\Graphics\CommonGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Graphics\CommonGL\shaderGL.cpp">
+      <Filter>XLEngine\Graphics\CommonGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Graphics\CommonGL\streamingVertexBuffer.cpp">
+      <Filter>XLEngine\Graphics\CommonGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Graphics\CommonGL\textureGL.cpp">
+      <Filter>XLEngine\Graphics\CommonGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Graphics\CommonGL\vertexBufferGL.cpp">
+      <Filter>XLEngine\Graphics\CommonGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Graphics\Devices\graphicsDeviceGL_1_3.cpp">
+      <Filter>XLEngine\Graphics\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Graphics\Devices\graphicsDeviceGL_2_0.cpp">
+      <Filter>XLEngine\Graphics\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Graphics\Devices\graphicsDeviceGL_3_2.cpp">
+      <Filter>XLEngine\Graphics\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Graphics\Devices\graphicsShadersGL_2_0.cpp">
+      <Filter>XLEngine\Graphics\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Graphics\Win32\graphicsDeviceGL_Win32.cpp">
+      <Filter>XLEngine\Graphics\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Graphics\graphicsDevice.cpp">
+      <Filter>XLEngine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Graphics\graphicsDeviceList.cpp">
+      <Filter>XLEngine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Math\crc32.cpp">
+      <Filter>XLEngine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Win32\clockWin32.cpp">
+      <Filter>XLEngine\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\UI\draw2D.cpp">
+      <Filter>XLEngine\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\UI\uiSystem.cpp">
+      <Filter>XLEngine\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Threads\mutexWin32.cpp">
+      <Filter>XLEngine\Threads</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Text\textSystem.cpp">
+      <Filter>XLEngine\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\PluginFramework\dynamicLibrary.cpp">
+      <Filter>XLEngine\PluginFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\PluginFramework\pluginManager.cpp">
+      <Filter>XLEngine\PluginFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\filestream.cpp">
+      <Filter>XLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\gameLoop.cpp">
+      <Filter>XLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\gameUI.cpp">
+      <Filter>XLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\imageLoader.cpp">
+      <Filter>XLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\iniReader.cpp">
+      <Filter>XLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\iniWriter.cpp">
+      <Filter>XLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\input.cpp">
+      <Filter>XLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\log.cpp">
+      <Filter>XLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\memoryPool.cpp">
+      <Filter>XLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\services.cpp">
+      <Filter>XLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\settings.cpp">
+      <Filter>XLEngine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\OS\win32\main.h">
+      <Filter>OS\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resource.h" />
+    <ClInclude Include="..\..\stdafx.h" />
+    <ClInclude Include="..\..\targetver.h" />
+    <ClInclude Include="..\..\XLEngine\Graphics\CommonGL\graphicsDeviceGL.h">
+      <Filter>XLEngine\Graphics\CommonGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\CommonGL\indexBufferGL.h">
+      <Filter>XLEngine\Graphics\CommonGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\CommonGL\renderTargetGL.h">
+      <Filter>XLEngine\Graphics\CommonGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\CommonGL\shaderGL.h">
+      <Filter>XLEngine\Graphics\CommonGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\CommonGL\streamingVertexBuffer.h">
+      <Filter>XLEngine\Graphics\CommonGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\CommonGL\textureGL.h">
+      <Filter>XLEngine\Graphics\CommonGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\CommonGL\vertexBufferGL.h">
+      <Filter>XLEngine\Graphics\CommonGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\Devices\graphicsDeviceGL_1_3.h">
+      <Filter>XLEngine\Graphics\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\Devices\graphicsDeviceGL_2_0.h">
+      <Filter>XLEngine\Graphics\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\Devices\graphicsDeviceGL_3_2.h">
+      <Filter>XLEngine\Graphics\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\Devices\graphicsShadersGL_2_0.h">
+      <Filter>XLEngine\Graphics\Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\Win32\graphicsDeviceGL_Win32.h">
+      <Filter>XLEngine\Graphics\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\capabilities.h">
+      <Filter>XLEngine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\graphicsDevice.h">
+      <Filter>XLEngine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\graphicsDevice_Platform.h">
+      <Filter>XLEngine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\graphicsDeviceList.h">
+      <Filter>XLEngine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\graphicsTypes.h">
+      <Filter>XLEngine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Graphics\samplerState.h">
+      <Filter>XLEngine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Math\crc32.h">
+      <Filter>XLEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Math\math.h">
+      <Filter>XLEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\UI\draw2D.h">
+      <Filter>XLEngine\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\UI\uiSystem.h">
+      <Filter>XLEngine\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Threads\mutex.h">
+      <Filter>XLEngine\Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Text\textSystem.h">
+      <Filter>XLEngine\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\PluginFramework\dynamicLibrary.h">
+      <Filter>XLEngine\PluginFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\PluginFramework\pluginManager.h">
+      <Filter>XLEngine\PluginFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\clock.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\filestream.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\gameLoop.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\gameUI.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\imageLoader.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\iniReader.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\iniWriter.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\input.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\log.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\memoryPool.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\services.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\settings.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\stream.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\types.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\xlServices.h">
+      <Filter>XLEngine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\..\XLEngine\Text\Inconsolata.otf">
+      <Filter>XLEngine\Text</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
