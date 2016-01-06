@@ -40,6 +40,9 @@
     <Filter Include="XLEngine\Graphics\Win32">
       <UniqueIdentifier>{f16f5203-d14c-453b-a817-7cb7e5ff6c9f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="XLEngine\Sound">
+      <UniqueIdentifier>{26b965b4-c358-495b-966b-2903f968e923}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\OS\win32\main.cpp">
@@ -144,6 +147,9 @@
     </ClCompile>
     <ClCompile Include="..\..\XLEngine\settings.cpp">
       <Filter>XLEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XLEngine\Sound\Sound.cpp">
+      <Filter>XLEngine\Sound</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -275,6 +281,9 @@
     </ClInclude>
     <ClInclude Include="..\..\XLEngine\xlServices.h">
       <Filter>XLEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XLEngine\Sound\Sound.h">
+      <Filter>XLEngine\Sound</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

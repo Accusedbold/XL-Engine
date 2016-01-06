@@ -68,25 +68,55 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(ProjectDir)packages\DevIL.1.7.8\build\native\lib\$(Platform)\dynamic\v110\$(Configuration)\;$(ProjectDir)packages\glew.1.9.0.1\build\native\lib\v110\$(Platform)\$(Configuration)\static;$(LibraryPath)</LibraryPath>
+    <Linkage-glew>static</Linkage-glew>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>$(ProjectDir)packages\DevIL.1.7.8\build\native\lib\$(Platform)\dynamic\v110\$(Configuration)\;$(ProjectDir)packages\glew.1.9.0.1\build\native\lib\v110\$(Platform)\$(Configuration)\static;$(LibraryPath)</LibraryPath>
+    <Linkage-glew>static</Linkage-glew>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>$(ProjectDir)packages\DevIL.1.7.8\build\native\lib\$(Platform)\dynamic\v110\$(Configuration)\;$(ProjectDir)packages\glew.1.9.0.1\build\native\lib\v110\$(Platform)\$(Configuration)\static;$(LibraryPath)</LibraryPath>
+    <Linkage-glew>static</Linkage-glew>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>$(ProjectDir)packages\DevIL.1.7.8\build\native\lib\$(Platform)\dynamic\v110\$(Configuration)\;$(ProjectDir)packages\glew.1.9.0.1\build\native\lib\v110\$(Platform)\$(Configuration)\static;$(LibraryPath)</LibraryPath>
+    <Linkage-glew>static</Linkage-glew>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <Link />
+    <Link />
+    <Link />
+    <Link>
+      <AdditionalDependencies>OpenGL32.lib;glew.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>COPY /Y $(ProjectDir)packages\DevIL.redist.1.7.8\build\native\bin\$(Platform)\dynamic\v110\$(Configuration)\DevIL.dll $(OutDir)\DevIL.dll</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <Link />
+    <Link />
+    <Link />
+    <Link>
+      <AdditionalDependencies>OpenGL32.lib;glew.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>COPY /Y $(ProjectDir)packages\DevIL.redist.1.7.8\build\native\bin\$(Platform)\dynamic\v110\$(Configuration)\DevIL.dll $(OutDir)\DevIL.dll</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -95,12 +125,16 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>OpenGL32.lib;glew.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>COPY /Y $(ProjectDir)packages\DevIL.redist.1.7.8\build\native\bin\$(Platform)\dynamic\v110\$(Configuration)\DevIL.dll $(OutDir)\DevIL.dll</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -109,12 +143,16 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>OpenGL32.lib;glew.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>COPY /Y $(ProjectDir)packages\DevIL.redist.1.7.8\build\native\bin\$(Platform)\dynamic\v110\$(Configuration)\DevIL.dll $(OutDir)\DevIL.dll</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\OS\win32\main.cpp" />
@@ -147,6 +185,7 @@
     <ClCompile Include="..\..\XLEngine\PluginFramework\pluginManager.cpp" />
     <ClCompile Include="..\..\XLEngine\services.cpp" />
     <ClCompile Include="..\..\XLEngine\settings.cpp" />
+    <ClCompile Include="..\..\XLEngine\Sound\Sound.cpp" />
     <ClCompile Include="..\..\XLEngine\Text\textSystem.cpp" />
     <ClCompile Include="..\..\XLEngine\Threads\mutexWin32.cpp" />
     <ClCompile Include="..\..\XLEngine\UI\draw2D.cpp" />
@@ -192,6 +231,7 @@
     <ClInclude Include="..\..\XLEngine\PluginFramework\pluginManager.h" />
     <ClInclude Include="..\..\XLEngine\services.h" />
     <ClInclude Include="..\..\XLEngine\settings.h" />
+    <ClInclude Include="..\..\XLEngine\Sound\Sound.h" />
     <ClInclude Include="..\..\XLEngine\stream.h" />
     <ClInclude Include="..\..\XLEngine\Text\textSystem.h" />
     <ClInclude Include="..\..\XLEngine\Threads\mutex.h" />
