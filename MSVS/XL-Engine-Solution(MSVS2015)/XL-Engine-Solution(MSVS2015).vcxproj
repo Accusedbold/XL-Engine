@@ -239,12 +239,16 @@
     <ClInclude Include="..\..\XLEngine\UI\draw2D.h" />
     <ClInclude Include="..\..\XLEngine\UI\uiSystem.h" />
     <ClInclude Include="..\..\XLEngine\xlServices.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="..\..\XLEngine\Text\Inconsolata.otf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="XL-Engine-Solution(MSVS2015).rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

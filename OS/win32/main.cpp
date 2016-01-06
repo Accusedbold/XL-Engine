@@ -43,7 +43,8 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstanc
 	XLSettings* settings = Settings::get();
 	sprintf(s_title, "XL Engine %s", Settings::getVersion());
 
-	LoadString(hInstance, IDC_XLENGINE, s_windowClass, MAX_LOADSTRING);
+	int count = LoadString(hInstance, IDC_XLENGINE, s_windowClass, MAX_LOADSTRING);
+	DWORD test = GetLastError();
 	MyRegisterClass(hInstance);
 
 	// perform application initialization:
@@ -155,6 +156,8 @@ BOOL InitInstance(HWND& hWnd, HINSTANCE hInstance, int nCmdShow)
 	hWnd = CreateWindow(s_windowClass, s_title, dwStyle, 0, 0, desiredSize.right-desiredSize.left, desiredSize.bottom-desiredSize.top, NULL, NULL, hInstance, NULL);
 	if (!hWnd)
 	{
+		DWORD test = GetLastError();
+		wprintf(L"CreateWindow failed with 0x%x\n", GetLastError());
 		return FALSE;
 	}
 
